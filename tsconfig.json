@@ -2,7 +2,9 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
   "exclude": ["tsup.config.ts"]
 }
