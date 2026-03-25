@@ -3,5 +3,6 @@
     "outDir": "dist",
     "rootDir": "src",
     "esModuleInterop": true
-  }
+  },
+  "exclude": ["tsup.config.ts"]
 }

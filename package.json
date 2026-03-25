@@ -2,9 +2,10 @@
   "name": "flashfy",
   "type": "module",
   "scripts": {
+    "dev": "tsx watch src/main.ts",
     "test": "vitest run",
     "test: watch": "vitest",
-    "build": "npm install && tsc",
+    "build": "tsup src/main.ts",
     "start": "node dist/main.js"
   },
   "devDependencies": {
