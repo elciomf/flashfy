@@ -6,8 +6,9 @@
     "start": "node dist/main.js"
   },
   "devDependencies": {
-    "typescript": "^6.0.2",
-    "@types/node": "^25.5.0"
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.5.0",
+    "typescript": "^6.0.2"
   },
   "dependencies": {
     "express": "^5.2.1"
