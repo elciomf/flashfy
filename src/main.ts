@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 
-const app = express();
+export const app = express();
 
 app.get("/", (req: Request, res: Response) => {
   const payload = {
@@ -12,6 +12,8 @@ app.get("/", (req: Request, res: Response) => {
 
 const PORT = Number(process.env.PORT) || 3000;
 
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running on port ${PORT}`);
-});
+if (!process.env.VITEST) {
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
