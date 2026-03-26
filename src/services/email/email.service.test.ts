@@ -12,7 +12,7 @@ vi.mock("resend", () => {
   };
 });
 
-import { sendEmail } from "./mail.service";
+import { sendEmail } from "./email.service";
 
 describe("Mail Service", () => {
   it("should return success true when email is sent", async () => {
