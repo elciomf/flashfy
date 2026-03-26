@@ -1,6 +1,15 @@
 import request from "supertest";
 import { describe, it, expect, vi } from "vitest";
 
+vi.mock("resend", () => ({
+  Resend: vi.fn().mockImplementation(function (this: any) {
+    this.emails = {
+      send: vi.fn(),
+    };
+    return this;
+  }),
+}));
+
 import { app } from "./main";
 import { AppDataSource } from "./data-source";
 
