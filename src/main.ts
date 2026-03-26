@@ -5,6 +5,8 @@ import { AppDataSource } from "./data-source";
 
 export const app = express();
 
+app.use(express.json());
+
 app.get("/healthz", async (req: Request, res: Response) => {
   try {
     await AppDataSource.query("SELECT 1");
